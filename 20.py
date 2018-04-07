@@ -14,10 +14,13 @@ def isValid(s):
                 if flag==False:
                     return False
                 else:
-                    stack=stack[:len(stack)-2]
+                    stack=stack[:len(stack)-1]
         else:
             stack+=i
-    return True 
+    if len(stack)==0:
+        return True 
+    else:
+        return False
 def check(x,y):
     if x=='(' and y==')':
         return True
@@ -27,5 +30,5 @@ def check(x,y):
         return True
     return False
 if __name__=='__main__':
-    print isValid('([)}')
+    print isValid('(]')
     
