@@ -8,12 +8,14 @@ def lengthOfLastWord(s):
         return 0;
     lenStr=len(s)-1
     length=0
-    while lenStr>0:
+    flag=False
+    while lenStr>=0:
         if(s[lenStr]!=' '):
+            flag=True
             length+=1
-        else :
+        elif  flag:
             break
         lenStr-=1
     return length
 if __name__ == '__main__':
-    print lengthOfLastWord('hello ')
+    print lengthOfLastWord('   a   bbb ')
