@@ -5,7 +5,7 @@ Created on Apr 8, 2018
 '''
 def lengthOfLastWord(s):
     if(s==None):
-        return 0;
+        return 0
     lenStr=len(s)-1
     length=0
     flag=False
@@ -17,5 +17,10 @@ def lengthOfLastWord(s):
             break
         lenStr-=1
     return length
+def lengthOfLastWord1(s):
+    split=s.split()
+    if len(split)==0:
+        return 0
+    return len(split[-1])
 if __name__ == '__main__':
-    print lengthOfLastWord('   a   bbb ')
+    print lengthOfLastWord1(' ')
